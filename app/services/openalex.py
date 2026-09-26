@@ -16,10 +16,11 @@ async def search_openalex(query: str, per_page: int = 10):
         "search": query,
         "per-page": per_page,
         "api_key": OPENALEX_API_KEY,
+        "mailto": "anchalgoyalwork@gmail.com",
     }
 
     headers = {
-        "User-Agent": "ResearchLens/0.1"
+        "User-Agent": "ResearchLens/0.1 (mailto:anchalgoyalwork@gmail.com)"
     }
 
     async with httpx.AsyncClient() as client:
