@@ -172,7 +172,8 @@ def health():
 
     return {
         "status": "ok",
-        "gemini_configured": bool(GEMINI_API_KEY)
+        "gemini_configured": bool(GEMINI_API_KEY),
+        "openalex_configured": bool(os.getenv("OPENALEX_API_KEY"))
     }
 
 
