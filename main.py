@@ -220,7 +220,12 @@ def search_literature(q: str):
             params={
                 "search": q,
                 "per-page": 15,
-                "sort": "relevance_score:desc"
+                "sort": "relevance_score:desc",
+                "api_key": os.getenv("OPENALEX_API_KEY"),
+                "mailto": "anchalgoyalwork@gmail.com"
+            },
+            headers={
+                "User-Agent": "ResearchLens/0.1 (mailto:anchalgoyalwork@gmail.com)"
             },
             timeout=20
         )
